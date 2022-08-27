@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameMania</title>
+    <link rel="icon" type="image/png" href="./Img/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1e592b5726.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body onload="rendenizarJogosOnline(), renderizacaoCarouselItems()">
+
+    <!------ Header incluindo menu-hamburguer/ search / bts --->
+    <header>
+        <nav>
+
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="">Contato</a>
+                    <ul class="menu-p-text">
+                        <li>Telefone - 7070-6070</li>
+                        <li>Telefone - 6070-7070</li>
+                        <li>Email - game_mania@eu_sei_la.com.br</li>
+                        <li>Endereço - rua: Vai com Deus, 27 <br> &nbsp; &nbsp;&nbsp; Bairro:
+                            Esperança</li>
+                    </ul>
+                </li>
+                <li><a href="">Suas Compras</a></li>
+                <li><a href="">informacoes</a></li>
+                <li><a href="">Sobre</a></li>
+
+            </ul>
+        </nav>
+        <a class="logo" href="./login.html" target="_blank"><img src="Img/logo.png" alt="Logo"></a>
+
+        <form class="bar-search" method="get" id="search">
+            <input class="cx-search" type="search" placeholder=" O que procura?..." name="search" id="search-bar"
+                placeholder="O que procura? " autocomplete required />
+            <button onclick="procurar()" class="bt-search type=" submit name="search" id="search"><i
+                    class="fas fa-search"></i></button>
+        </form>
+        <div class="info-compras">
+
+            <a href=""><img src="./Img/red-localizador.gif" alt="localizador"></a>
+            <a href=""><img src="./Img/red-tele.gif" alt="telefone"></a>
+            <a href=""><img src="./Img/red-cart.gif" alt="cartShopping"></a>
+        </div>
+    </header>
+
+
+    <!------- primeiro carousel ----------------->
+
+    <section class="carousel" id="carousel">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div id="carousel-produtos" class="carousel-inner">
+                <!-- <div class="carousel-item active">
+                    <img src="./Img/produtos/pc-gamer-grande.png" alt="Oculos virtual" class="d-block w-100">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Tudo para você aquele compor aquele <a href="#">Pc-gamer </a>monstro!!</h5>
+                        <p>Jogar com seus amigos é muito bom!! Com os equipamentos certos então a diversão fica
+                            completa!! Veja os novos produtos ..</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./Img/produtos/noteBook Grande.png" alt="Img Notebook" class="d-block w-100">
+                    <div class="carousel-caption d-none d-md-block" style=" color: black">
+                        <h5>Trabalho, Estudo...acesse <a href="">aqui</a>... </h5>
+                        <p>E veja as diversas opções desse equipamento fundamental para o seu dia a dia!!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Img/produtos/oculos jogos Grande.png" alt="Oculos Virtual" class="d-block w-100">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Diversão e novidades..acesse <a href=""> Aqui</a></h5>
+                        <p>Veja o que há de mais novo.. do que está em alta .. e os queridinhos do mundo Gamer!!.</p>
+                    </div>
+                </div> -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!---------- secao das logo-marcas  ------->
+
+    <section class="logos">
+        <a href=""><img style="border-radius: 50px;" src="./Img/playstation.png" alt="logoPS"></a>
+        <a href=""><img src="./Img/asus.png" alt="logoAsus"></a>
+        <a href=""><img src="./Img/corsair-logo-seeklogo.com.png" alt="logoCorsair"></a>
+        <a href=""><img src="./Img/xbox2 Pequeno.png" alt="logoXboX"></a>
+        <a href=""><img src="./Img/nintendo_logo_icon_181362.png" alt="logo Nitendo"></a>
+        <a href=""><img src="./Img/logitech.png" alt="logo logitech"></a>
+    </section>
+
+    <!-----------section menu horizontal--------->
+
+    <section>
+        <div class="menu-horizontal transitionDelay">
+
+            <div class="accordion " id="accordionExample">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Pc-Gamer
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="bt-1">
+                                <a href="#">monitores</a>
+                                <a href="#">hardware</a>
+                                <a href="#">torre</a>
+                                <a href="#">diversos</a>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Periféricos
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="bt-2">
+                                <a href="#">Teclado</a>
+                                <a href="#">mouse</a>
+                                <a href="#">cabos</a>
+                                <a href="#"></a>
+                                <a href="#"></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Games-Console
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="bt-3">
+                                <a href="#">PlayStation</a>
+                                <a href="#">Xbobx</a>
+                                <a href="#">Nintendo</a>
+                                <a href="#"></a>
+                                <a href="#"></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Celulares
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="bt-4">
+                                <a href="#">Samsung</a>
+                                <a href="#">Motorola</a>
+                                <a href="#">Iphone</a>
+                                <a href="#"></a>
+                                <a href="#"></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Notebooks
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="bt-5">
+                                <a href="#">DEll</a>
+                                <a href="#">Samsung</a>
+                                <a href="#"></a>
+                                <a href="#"></a>
+                                <a href="#"></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Novidades
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="bt-6">
+                                <a href="#">Oculos virtual</a>
+                                <a href="#">Controles Especias</a>
+                                <a href="#"></a>
+                                <a href="#"></a>
+                                <a href="#"></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------- section das novidades  ---->
+
+    <div class="section-newAndPrevious">
+        <div class="newAndPrevious">
+            <h2> Novidades e Lançamentos</h2>
+            <div class="novidades-itens">
+                <div class="new-item1">
+                    <img src="./Img/produtos/fifa-22-new-features.png" alt="fifa-EA">
+                    <p>A<a href="#">EletronicArts (EA)</a> comunicou encerramento de pareceria com a FIFA, com isso a
+                        desenvolvedora oficializou que o novo nome da marca será mesmo EASportsFC, novidades mais
+                        concretas em 2023...
+                        Enquanto isso curtam o lançamento do FIFA 2022.</p>
+                </div>
+                <div class="new-item2">
+                    <img src="./Img/produtos/callDuty.png" alt="img callDuty">
+                    <p><a href="https://www.callofduty.com/br/pt">Call of Duty</a>: Modern Warfare II - novo jogo
+                        popular da franquia em primeira pessoa
+                        da Actvision chega em 28 de outubro para PlayStation 5 e 4, Xbox Series X/S e One, e para PC via
+                        os serviços de Battle.net e Steam. ( No Brasil será vendido exclusivamente em formato digital.)
+                    </p>
+                </div>
+            </div>
+            <div class="gif-card">
+                <div class="gift-arrow animationPosition">
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+                <a href="compras.html" class="gif-icon" data-toggle="tooltip"><img src="./Img/CARD-2.gif"
+                        alt="Img Cartão Gift"></a>
+            </div>
+
+        </div>
+    </div>
+
+    <!--------- section jogos online ------------------>
+    <div class="jogos-online"></div>
+    <div class="jogos-inner">
+        <h2>Jogos online mais jogados!!!</h2>
+        <div id="jogos-online" class="jogos-itens">
+            <!-- <div class="item obj-1">
+
+                    <img src="./Img/PUBG-Battlegrounds-900x503 1.png" alt="img PUBG">
+                    <p><a href="https://na.battlegrounds.pubg.com">Battlegrounds(PUBG)</a> - é um jogo do gênero battle royale, uma mistura de
+                        sobrevivência e exploração de territórios.</p>
+                </div>
+                <div class="item obj-2">
+
+                    <img src="./Img/minecraft.png" alt="Img cidade MineCraft">
+                    <p><a href="https://www.minecraft.net/pt-pt">Minecraft</a> - A ideia básica desse jogo que conquista multidões é a construção
+                        por blocos. Os competidores precisam recolher recursos para que possam sobreviver, criando
+                        ambientes de maneira criativa.</p>
+                </div>
+                <div class="item obj-3">
+
+                    <img src="./Img/Fortinite.png" alt="img jogadorFortinite">
+                    <p><a href="https://www.epicgames.com/fortnite/pt-BR/home">Fortinite</a> - Um dos jogos mais populares e celebrados em todo o mundo, Fortnite
+                        foi lançado em 2017 e atraiu 125 milhões de jogadores somente no seu primeiro ano de
+                        estreia.</p>
+                </div>
+                <div class="item obj-4">
+
+                    <img src="./Img/leagueOflegends.png" alt="img jogadorLOL">
+                    <p>Conhecido como LOL, o <a href="">League of Legends</a> - é o favorito entre os gamers,
+                        uma verdadeira febre no mundo dos jogos online! - O League of Legends conta com competições
+                        internacionais enormes, reunindo fãs de todos os lugares do mundo.</p>
+                </div> -->
+
+        </div>
+    </div>
+    </div>
+
+    <!---------- segundo carousel direcionado a experiencia de clientes -->
+
+    <div class="client">
+
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-block w-100 ">
+                        <div class="clientes-img ">
+                            <img src="./Img/clientes/cliente gamer Grande.png" class="" alt=" Cliente-Joshua ">
+                            <div class="cliente-text">
+                                <h3>"Cliente Satisfeito!! "</h3>
+                                <p><B>Joshua - </B>Cum sociis natoque penatibus et magnis dis parturient montes,
+                                    nascetur ridiculus mus.
+                                    Aenean
+                                    eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-block w-100 ">
+                        <div class="clientes-img">
+                            <img src="./Img/clientes/Cliente John Grande.png" class="" alt="cliente-John">
+                            <div class="cliente-text">
+                                <h3>" Cliente Satisfeito!! "</h3>
+                                <p><B>John - </B>Uma empresa 100% comprometida com seus clientes,...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carousel-item">
+                    <div class="d-block w-100 ">
+                        <div class="clientes-img">
+                            <img src="./Img/clientes/cliente Peter Grande.png" class="" alt=" cliente-Peter">
+                            <div class="cliente-text">
+                                <h3>" Cliente Satisfeito !! "</h3>
+                                <p><B>Peter - </B>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                                    ridiculus mus.
+                                    Aenean
+                                    eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!----------- footer----------------------->
+
+    <footer>
+        <div class="container-footer">
+            <div class="atendimento">
+                <h4> Atendimento</h4>
+                <ul>
+                    <p>telefone</p>
+                    <p></p>
+                    <p>Email</p>
+                    <p>endereço</p>
+
+                </ul>
+            </div>
+            <div class="Links-úteis">
+                <h4> Links úteis </h4>
+                <ul>
+                    <p>Tire suas dúvidas</p>
+                    <p>Trabalhe conosco</p>
+                    <p>Nossa Loja</p>
+                    <p>Termos de garantia</p>
+
+                </ul>
+            </div>
+            <div class="pagamentos">
+                <h4> Formas de Pagamento</h4>
+                <div class="formas-pagar ">
+                    <img src="./Img/americanex Pequeno.png">
+                    <img src="./Img/paypall.png">
+                    <img src="./Img/visa.png">
+                    <img src="./Img/masterCard.png">
+                    <img src="./Img/boleto.png">
+                </div>
+            </div>
+            <div class="redes-socias">
+                <h4> Redes socias </h4>
+                <div class="redes">
+                    <a href="#"><img src="./Img/facebook Pequeno.png" alt="Facebook"></a>
+                    <a href="#"><img src="./Img/insta Pequeno.png" alt="Instagram"></a>
+                    <a href="#"><img src="./Img/youtube Pequeno.png" alt="YouTube"></a>
+                </div>
+            </div>
+            <div class="cadastro-email">
+                <a href="#"><img src="./Img/logo.png" alt="logo"></a>
+                <p>Cadastre-se abaixo para receber ofertas exclusivas!!</p>
+                <form class="bar-cadastro" method="get">
+                    <input id="campo-email" class="box-cadastro" type="email" placeholder="Digite o seu e-mail"
+                        autocomplete required />
+                    <button onclick="sendEmail()" class="bt-cadastro">Cadastre-se</button>
+
+                </form>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="JS/jquery-3.6.0.js"></script>
+    <script src="/JS/Home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

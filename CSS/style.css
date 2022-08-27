@@ -1,0 +1,507 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border
+}
+
+a:hover {
+    opacity: 0.7;
+
+}
+
+/* configurações no header*/
+header {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    margin-bottom: none;
+}
+
+.header img {
+    width: 80px;
+    height: 80px;
+}
+
+/* menu-hamburguer*/
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li a {
+    text-transform: uppercase;
+    color: aliceblue;
+    letter-spacing: 3px;
+    margin-right: 32px;
+    font-size: 16px;
+}
+
+.mobile-menu {
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-menu div {
+    width: 37px;
+    height: 4px;
+    background: white;
+    margin: 8px;
+}
+
+.nav-list {
+    position: absolute;
+    top: 14.5vh;
+    left: 0;
+    width: 30vw;
+    height: 92vh;
+    background: rgb(61, 60, 62);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in;
+    z-index: 1;
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+.nav-list li {
+    width: 90%;
+    margin-right: 15px;
+    opacity: 0;
+    color: aliceblue;
+    font-size: 14px;
+    list-style: none;
+
+}
+
+.mobile-menu {
+    display: block;
+}
+
+.nav-list a {
+    overflow: visible;
+}
+
+@keyframes navLinkFade {
+    form {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-9px, -9px);
+
+}
+
+/* barra de pesquisa*/
+.bar-search {
+    width: 300px;
+    padding: 5px;
+    border-radius: 7px;
+    border: 2px solid;
+    border-color: aliceblue;
+}
+
+.cx-search,
+.bt-search {
+    border: none;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.cx-search {
+    width: 260px;
+}
+
+.bt-search {
+    cursor: pointer;
+    color: aliceblue;
+    background: none;
+}
+
+.bt-search:hover {
+    background-color: aliceblue;
+    color: black;
+}
+
+
+/* botoes de informacoes e cartShopping*/
+.info-compras {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.info-compras img {
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+header img {
+    margin-right: -80px;
+}
+
+
+/* configurações do primeiro carousel*/
+.carousel img {
+    width: 100%;
+    height: 600px;
+}
+
+
+.carousel-control-prev {
+    z-index: 0;
+}
+
+/* configurações das logos*/
+.logos {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(78, 89, 89), rgba(255, 255, 255, 0));
+}
+
+.logos img {
+    width: 90px;
+    height: 90px;
+
+}
+
+/* configurações do accordion menu-horizontal*/
+.menu-horizontal {
+    width: 100%;
+    height: 90px;
+    background-color: black;
+}
+
+.transitionDelay:hover {
+    height: 100%;
+}
+
+.transitionDelay:not(.carousel) {
+    height: 0%;
+}
+
+
+#accordionExample {
+    display: flex;
+    justify-content: space-around;
+}
+
+.accordion-item {
+    background-color: black;
+}
+
+.accordion-button {
+    background-color: black;
+    color: aliceblue;
+    margin: none;
+}
+
+.accordion-body ul {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.accordion-button:not(.collapsed) {
+    color: red;
+}
+
+/* configurações bloco de novidades*/
+.section-newAndPrevious {
+    width: 100%;
+    padding: 30px;
+}
+
+.section-newAndPrevious h2 {
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 30px;
+    margin: 50px;
+}
+
+.novidades-itens p {
+    width: 50%;
+    height: 25%;
+    padding: 20px;
+    text-align: left;
+    font-size: 20px;
+
+}
+
+.novidades-itens a {
+    color: red;
+}
+
+.novidades-itens img {
+    width: 50%;
+    height: 25%;
+    position: relative;
+    border-radius: 15px;
+}
+
+.new-item1 {
+    display: flex;
+    direction: rtl;
+    margin: 20px;
+}
+
+.new-item2 {
+    display: flex;
+}
+
+.new-item2 img {
+    position: relative;
+    top: -50px;
+}
+
+.new-item2 p {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.gif-card {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.gif-card img:hover {
+    transform: scale(1.2) rotateZ(360deg);
+    transition: transform 1s;
+
+}
+
+.gif-card i {
+    color: red;
+    font-size: 150px;
+}
+
+.gif-card img {
+    width: 60%;
+    height: 200px;
+    border: 2px solid red;
+    border-radius: 20px;
+    padding: 10px;
+
+
+}
+
+.gift-arrow {
+    width: 200px;
+    position: relative;
+}
+
+.animationPosition {
+    position: absolute;
+    animation: position 2s linear infinite;
+}
+
+@keyframes position {
+    0% {
+        left: 35%;
+    }
+
+    25% {
+        left: 50%;
+    }
+
+    50% {
+        left: 35%;
+    }
+
+    75% {
+        left: 50%;
+    }
+
+    100% {
+        left: 35%
+    }
+}
+
+
+/* configurações area jogos online*/
+
+.jogos-online {
+    width: 100%;
+    background-color: black;
+}
+
+.jogos-inner {
+    padding: 40px;
+    color: aliceblue;
+}
+
+.jogos-inner h2 {
+    font-size: 40px;
+}
+
+.jogos-itens {
+    margin-top: 30px;
+}
+
+.item {
+    display: flex;
+    padding: 20px;
+    position: relative;
+    align-items: initial;
+}
+
+.item p {
+    margin: 30px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.item a {
+    text-decoration: underline;
+    color: red;
+}
+
+.item img {
+    width: 50%;
+    height: 50%;
+    padding: 20px;
+    border: 3px solid white;
+    border-radius: 20px;
+}
+
+.obj-2 img,
+.obj-3 img,
+.obj-4 img {
+    width: 500px;
+    height: 300px
+}
+
+.obj-2,
+.obj-4 {
+    direction: rtl;
+    margin-top: -50px;
+    height: 50%px;
+}
+
+.obj-3 {
+    margin-top: -50px
+}
+
+
+/* configurações carousel clientes*/
+.client {
+    width: 100%;
+    background: linear-gradient(90deg, rgba(78, 89, 89) 40%, transparent);
+
+}
+
+.clientes-img {
+    display: inline-flex;
+    padding: 50px;
+
+}
+
+.clientes-img img {
+    width: 80%;
+    height: 50%;
+    left: 400px;
+    border-radius: 10px;
+}
+
+.cliente-text {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    color: black;
+}
+
+
+/* configurações do footer */
+.container-footer {
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: aliceblue;
+    background-color: black;
+    gap: 50px;
+
+}
+
+h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+
+}
+
+.pagamentos img {
+    width: 60px;
+    height: 30px;
+    padding: 3px;
+
+}
+
+.formas-pagar {
+    display: flex;
+    flex: wrap;
+    gap: 10px
+}
+
+.redes img {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+
+.cadastro-email a {
+    padding: 50px;
+}
+
+.cadastro-email p {
+    font-size: 20px;
+}
+
+.box-cadastro {
+    width: 300px;
+    padding: 5px;
+    border-radius: 10px
+}
+
+.bt-cadastro {
+    background-color: #ff0000ab;
+    color: aliceblue;
+    padding: 5px;
+    border-radius: 10px;
+}
