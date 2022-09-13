@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;1,400;1,700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border
+    box-sizing: border;
 }
 
 a:hover {
     opacity: 0.7;
 
 }
+
 
 /* configurações no header*/
 header {
@@ -20,30 +23,26 @@ header {
     margin-bottom: none;
 }
 
-.header img {
-    width: 80px;
-    height: 80px;
+.logo-principal img {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
 }
+
 
 /* menu-hamburguer*/
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.nav-list {
-    list-style: none;
-    display: flex;
+    font-family: 'work sans', sans-serif;
 }
 
 .nav-list li a {
     text-transform: uppercase;
     color: aliceblue;
     letter-spacing: 3px;
-    margin-right: 32px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .mobile-menu {
@@ -59,18 +58,21 @@ nav {
 }
 
 .nav-list {
+    display: flex;
+    gap: 15%;
     position: absolute;
-    top: 14.5vh;
+    align-items: center;
+    flex-direction: column;
+    top: 9vh;
     left: 0;
-    width: 30vw;
+    width: 50%;
     height: 92vh;
     background: rgb(61, 60, 62);
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in;
-    z-index: 1;
+    z-index: 2;
+    list-style: none;
+
 }
 
 .nav-list.active {
@@ -79,10 +81,10 @@ nav {
 
 .nav-list li {
     width: 90%;
-    margin-right: 15px;
+    margin-right: 20px;
     opacity: 0;
     color: aliceblue;
-    font-size: 14px;
+    font-size: 18px;
     list-style: none;
 
 }
@@ -121,30 +123,41 @@ nav {
 
 }
 
+
 /* barra de pesquisa*/
 .bar-search {
     width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
     padding: 5px;
-    border-radius: 7px;
+    border-radius: 20px;
     border: 2px solid;
     border-color: aliceblue;
+
 }
 
 .cx-search,
 .bt-search {
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 2px;
 }
 
 .cx-search {
-    width: 260px;
+    display: block;
+    width: 90%;
 }
 
 .bt-search {
     cursor: pointer;
     color: aliceblue;
     background: none;
+}
+
+.bt-search i {
+    font-size: 25px;
 }
 
 .bt-search:hover {
@@ -158,6 +171,7 @@ nav {
     display: flex;
     justify-content: space-between;
     width: 100px;
+    margin-right: 50px;
 }
 
 .info-compras img {
@@ -183,6 +197,15 @@ header img {
     z-index: 0;
 }
 
+.carousel-indicators {
+    z-index: 1;
+}
+
+.carousel-caption h5 {
+    text-decoration-style: solid;
+}
+
+
 /* configurações das logos*/
 .logos {
     width: 100%;
@@ -203,7 +226,9 @@ header img {
 .menu-horizontal {
     width: 100%;
     height: 90px;
+    justify-content: space-around;
     background-color: black;
+    font-family: 'work sans', sans-serif;
 }
 
 .transitionDelay:hover {
@@ -241,16 +266,19 @@ header img {
 }
 
 /* configurações bloco de novidades*/
-.section-newAndPrevious {
+.section-newAndPreview {
     width: 100%;
     padding: 30px;
 }
 
-.section-newAndPrevious h2 {
+.section-newAndPreview h2 {
     text-transform: uppercase;
-    text-decoration: underline;
     font-size: 30px;
     margin: 50px;
+    background: linear-gradient(180deg, #ff3535, #c3c3c3);
+    padding: 10px;
+    border-radius: 20px;
+    font-family: 'work sans', sans-serif bold;
 }
 
 .novidades-itens p {
@@ -259,7 +287,7 @@ header img {
     padding: 20px;
     text-align: left;
     font-size: 20px;
-
+    font-family: 'work sans', sans-serif;
 }
 
 .novidades-itens a {
@@ -273,24 +301,24 @@ header img {
     border-radius: 15px;
 }
 
-.new-item1 {
+.item1 {
     display: flex;
     direction: rtl;
     margin: 20px;
 }
 
-.new-item2 {
+.item2 {
     display: flex;
 }
 
-.new-item2 img {
+.item2 img {
     position: relative;
     top: -50px;
 }
 
-.new-item2 p {
+.item2 p {
     margin-left: 30px;
-    margin-top: 20px;
+    margin-top: -40px;
 }
 
 .gif-card {
@@ -302,7 +330,6 @@ header img {
 .gif-card img:hover {
     transform: scale(1.2) rotateZ(360deg);
     transition: transform 1s;
-
 }
 
 .gif-card i {
@@ -311,13 +338,12 @@ header img {
 }
 
 .gif-card img {
-    width: 60%;
+    width: 90%;
     height: 200px;
     border: 2px solid red;
     border-radius: 20px;
     padding: 10px;
-
-
+    margin-top: -30px;
 }
 
 .gift-arrow {
@@ -366,7 +392,10 @@ header img {
 }
 
 .jogos-inner h2 {
-    font-size: 40px;
+    font-size: 30px;
+    background: linear-gradient(180deg, #ff3535, #c3c3c3);
+    padding: 10px;
+    border-radius: 20px;
 }
 
 .jogos-itens {
@@ -422,55 +451,69 @@ header img {
 .client {
     width: 100%;
     background: linear-gradient(90deg, rgba(78, 89, 89) 40%, transparent);
-
 }
 
-.clientes-img {
+.carousel-clientes {
     display: inline-flex;
     padding: 50px;
-
 }
 
-.clientes-img img {
-    width: 80%;
+.carousel-clientes img {
+    width: 50%;
     height: 50%;
-    left: 400px;
     border-radius: 10px;
 }
 
 .cliente-text {
+    width: 50%;
+    height: 50%;
     position: relative;
     align-items: center;
     justify-content: center;
-    padding: 100px;
+    padding: 50px;
     color: black;
+    font-size: 20px;
 }
 
 
 /* configurações do footer */
 .container-footer {
     width: 100%;
+    background-color: black;
+}
+
+.footer-conteudo {
+    padding: 20px;
     display: flex;
-    padding: 30px;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     color: aliceblue;
-    background-color: black;
-    gap: 50px;
+    gap: 30px;
 
 }
 
-h4 {
+.footer-conteudo h4 {
     font-size: 20px;
-    text-transform: uppercase;
 
+}
+
+.footer-conteudo a {
+    font-size: 18px;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.informacoesFooter {
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: 15px;
 }
 
 .pagamentos img {
     width: 60px;
     height: 30px;
-    padding: 3px;
-
 }
 
 .formas-pagar {
@@ -485,23 +528,341 @@ h4 {
     padding: 5px;
 }
 
-.cadastro-email a {
-    padding: 50px;
+.cadastro-email img {
+    width: 100px;
+    height: 90px;
 }
 
 .cadastro-email p {
     font-size: 20px;
 }
 
+.bar-cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .box-cadastro {
     width: 300px;
-    padding: 5px;
-    border-radius: 10px
+    padding: 4px;
+    border-radius: 10px 0 0 10px;
+    font-size: 20px;
+
 }
 
 .bt-cadastro {
     background-color: #ff0000ab;
     color: aliceblue;
-    padding: 5px;
-    border-radius: 10px;
+    padding: 4px;
+    border-radius: 0 10px 10px 0;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    /*header*/
+    header {
+        height: 75px;
+    }
+
+    .nav-list {
+        top: 7vh
+    }
+
+    .nav-list a {
+        font-size: 18px;
+    }
+
+    .nav-list li {
+        font-size: 16px;
+    }
+
+    .logo-principal img {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    /* primeiro carousel*/
+    .carousel img {
+        height: 450px;
+    }
+
+    /* secao de logos */
+    .logos img {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* secao de novidades */
+    .novidades-itens p {
+        font-size: 18px;
+    }
+
+    /* secao jogos-online*/
+    .item p {
+        font-size: 18px;
+    }
+
+    .item img {
+        width: 40%;
+        height: 40%;
+    }
+
+    /* secao clientes comentarios */
+    .cliente-text {
+        width: 40%;
+        height: 40%;
+        font-size: 18px;
+    }
+
+    /* footer */
+    .footer-conteudo {
+        gap: 20px;
+    }
+
+    .footer-conteudo h4 {
+        font-size: 18px;
+    }
+
+    .footer-conteudo a {
+        font-size: 16px;
+    }
+
+    .pagamentos img {
+        width: 40px;
+        height: 25px;
+    }
+
+    .redes img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+    }
+
+    .cadastro-email img {
+        width: 80px;
+        height: 70px;
+        padding: 10px;
+    }
+
+    .cadastro-email p {
+        font-size: 18px;
+    }
+
+    .box-cadastro {
+        width: 200px;
+        font-size: 18px;
+    }
+
+    .bt-cadastro {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /*header*/
+    header {
+        height: 60px;
+        display: flex;
+        flex-basis: 30vw;
+    }
+
+    .mobile-menu.active .line1 {
+        transform: rotate(-45deg) translate(-2px, 3px);
+    }
+
+    .nav-list {
+        top: 6vh;
+    }
+
+    .nav-list a {
+        font-size: 16px;
+    }
+
+    .nav-list li {
+        font-size: 14px;
+    }
+
+    .mobile-menu div {
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+    }
+
+    .logo-principal img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .bar-search {
+        border: none;
+    }
+
+    .bar-search i {
+        background-color: aliceblue;
+        color: black;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 15px;
+    }
+
+    .cx-search {
+        width: 50%;
+        background-color: black;
+        color: aliceblue;
+    }
+
+    .info-compras {
+        display: none;
+    }
+
+    /* primeiro carousel*/
+    .carousel img {
+        height: 300px;
+    }
+
+    .carousel h5 {
+        display: show;
+        font-size: 18px;
+    }
+
+    .carousel-caption p {
+        display: none;
+    }
+
+    /* secao de logos*/
+    .logos {
+        height: 50px;
+    }
+
+    .logos img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* menu horizontal*/
+    .accordion-button,
+    .accordion-body {
+        font-size: 16px;
+    }
+
+    .accordion {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /*novidades */
+    .section-newAndPreview h2 {
+        font-size: 18px;
+        margin: 20px;
+    }
+
+    .new {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .new p {
+        width: 100vw;
+        font-size: 15px;
+    }
+
+    .gif-card i {
+        font-size: 50px;
+
+    }
+
+    .gif-card img {
+        height: 120px;
+    }
+
+    /* jogos online  */
+    .jogos-inner h2 {
+        font-size: 20px;
+    }
+
+
+    .item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item p {
+        font-size: 15px;
+    }
+
+    .item img {
+        width: 50%;
+        height: 50%;
+    }
+
+    .obj-3,
+    .obj-4 {
+        display: none;
+    }
+
+    /* carousel clientes*/
+    .carousel {
+        height: 300px;
+    }
+
+    .carousel-clientes img {
+        display: none;
+    }
+
+    .cliente-text {
+        width: 300px;
+        margin-top: -50px;
+    }
+
+    .cliente-text h3 {
+        font-size: 18px;
+
+    }
+
+    .cliente-text p {
+        font-size: 16px;
+    }
+
+    /* footer */
+    .footer-conteudo {
+        display: flex;
+        flex-direction: column;
+        padding: none;
+        gap: 30px;
+    }
+
+    .footer-conteudo h4 {
+        font-size: 18px;
+    }
+
+    .footer-conteudo a {
+        font-size: 15px;
+    }
+
+    .cadastro-email img {
+        width: 70px;
+        height: 60px;
+        margin-top: -60px;
+        margin-left: 160px;
+    }
+
+    .cadastro-email p {
+        margin: 20px;
+    }
+
+    .box-cadastro,
+    .bt-cadastro {
+        height: 28px;
+        font-size: 16px;
+    }
+
+    .box-cadastro {
+        width: 50%;
+    }
 }
