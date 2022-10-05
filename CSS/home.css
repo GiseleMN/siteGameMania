@@ -24,7 +24,7 @@ header {
 }
 
 .logo-principal img {
-    width: 70px;
+    width: 75px;
     height: 70px;
     margin: 10px;
 }
@@ -59,11 +59,11 @@ nav {
 
 .nav-list {
     display: flex;
-    gap: 15%;
     position: absolute;
     align-items: center;
     flex-direction: column;
-    top: 9vh;
+    justify-content: space-around;
+    top: 90px;
     left: 0;
     width: 50%;
     height: 92vh;
@@ -80,6 +80,13 @@ nav {
 }
 
 .nav-list li {
+    color: white;
+    letter-spacing: 3px;
+    margin-right: 32px;
+}
+
+/* 
+.nav-list li {
     width: 90%;
     margin-right: 20px;
     opacity: 0;
@@ -87,7 +94,7 @@ nav {
     font-size: 18px;
     list-style: none;
 
-}
+} */
 
 .mobile-menu {
     display: block;
@@ -295,7 +302,7 @@ header img {
 }
 
 .novidades-itens img {
-    width: 50%;
+    width: 30%;
     height: 25%;
     position: relative;
     border-radius: 15px;
@@ -428,11 +435,9 @@ header img {
     border-radius: 20px;
 }
 
-.obj-2 img,
-.obj-3 img,
-.obj-4 img {
+.item img {
     width: 500px;
-    height: 300px
+    height: 300px;
 }
 
 .obj-2,
@@ -600,14 +605,19 @@ header img {
         font-size: 18px;
     }
 
+    .new img {
+        width: 40%;
+
+    }
+
     /* secao jogos-online*/
     .item p {
         font-size: 18px;
     }
 
     .item img {
-        width: 40%;
-        height: 40%;
+        width: 30%;
+        height: 30%;
     }
 
     /* secao clientes comentarios */
@@ -772,6 +782,12 @@ header img {
         font-size: 15px;
     }
 
+    .new img {
+        width: 50%;
+        height: 50%;
+
+    }
+
     .gif-card i {
         font-size: 50px;
 
@@ -797,8 +813,9 @@ header img {
     }
 
     .item img {
-        width: 50%;
-        height: 50%;
+        width: 30%;
+        height: 30%;
+        padding: 10px;
     }
 
     .obj-3,
